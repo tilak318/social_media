@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
+import { API_ENDPOINTS } from "@/config/api";
+import { useToast } from "@/components/ui/use-toast";
 
 const BrandAnalysisPage = () => {
   const [brandName, setBrandName] = useState("");
@@ -13,13 +15,14 @@ const BrandAnalysisPage = () => {
     brand_analysis: string;
     sentiment_analysis: string;
   } | null>(null);
+  const { toast } = useToast();
 
   const analyzeBrand = async () => {
     if (!brandName.trim()) return;
     
     setLoading(true);
     try {
-      const response = await fetch("/api/analyze-brand", {
+      const response = await fetch(API_ENDPOINTS.BRAND_ANALYSIS, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,10 +30,20 @@ const BrandAnalysisPage = () => {
         body: JSON.stringify({ brand_name: brandName }),
       });
       
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to analyze brand");
+      }
+      
       const data = await response.json();
       setResults(data);
     } catch (error) {
       console.error("Error analyzing brand:", error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to analyze brand",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }

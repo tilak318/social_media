@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
+import { API_ENDPOINTS } from "@/config/api";
+import { useToast } from "@/components/ui/use-toast";
 
 const ContentCalendarPage = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +21,7 @@ const ContentCalendarPage = () => {
     calendar: string;
     briefs: string;
   } | null>(null);
+  const { toast } = useToast();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,7 +37,7 @@ const ContentCalendarPage = () => {
 
     setLoading(true);
     try {
-      const response = await fetch("/api/generate-calendar", {
+      const response = await fetch(API_ENDPOINTS.CONTENT_CALENDAR, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,10 +45,20 @@ const ContentCalendarPage = () => {
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to generate calendar");
+      }
+
       const data = await response.json();
       setResults(data);
     } catch (error) {
       console.error("Error generating calendar:", error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to generate calendar",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }

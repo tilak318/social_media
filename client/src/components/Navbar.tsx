@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrainCircuit, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,13 +19,12 @@ const Navbar = () => {
           
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-            <Link to="/calendar" className="text-gray-300 hover:text-white transition-colors">Calendar</Link>
-            <Link to="/analytics" className="text-gray-300 hover:text-white transition-colors">Analytics</Link>
-            <Link to="/assistant" className="text-gray-300 hover:text-white transition-colors">AI Assistant</Link>
+            <Link to="/brand-analysis" className="text-gray-300 hover:text-white transition-colors">Brand Analysis</Link>
+            <Link to="/content-calendar" className="text-gray-300 hover:text-white transition-colors">Content Calendar</Link>
           </div>
           
           <div className="flex items-center space-x-4">
-            <Link to="/calendar">
+            <Link to="/brand-analysis">
               <Button className="bg-gradient-to-r from-shadow-accent to-shadow-highlight hover:opacity-90 transition-opacity">
                 Get Started
               </Button>

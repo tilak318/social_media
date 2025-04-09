@@ -1,6 +1,6 @@
-
 import React from "react";
 import { BrainCircuit, Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-gray-400 mb-6">
-              Revolutionize your social media presence with advanced AI analytics and strategy.
+              AI-powered social media tools for brand analysis and content planning.
             </p>
             <div className="flex space-x-4">
               <SocialIcon icon={<Twitter className="h-4 w-4" />} />
@@ -27,10 +27,10 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wide text-gray-200 mb-4">Product</h4>
+            <h4 className="text-sm font-bold uppercase tracking-wide text-gray-200 mb-4">Tools</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+              <li><Link to="/brand-analysis" className="text-gray-400 hover:text-white transition-colors">Brand Analysis</Link></li>
+              <li><Link to="/content-calendar" className="text-gray-400 hover:text-white transition-colors">Content Calendar</Link></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">API</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Integrations</a></li>
             </ul>

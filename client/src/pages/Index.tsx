@@ -26,7 +26,7 @@ const Index = () => {
                 </div>
                 <h2 className="text-2xl font-bold mb-4 text-center">Brand Analysis</h2>
                 <p className="text-gray-300 mb-6 text-center">
-                  Get detailed insights about any brand's social media presence, including platform usage, content strategy, and sentiment analysis
+                  Get detailed insights about brand's social media presence and performance, including content strategy and sentiment analysis
                 </p>
                 <div className="text-center">
                   <Link to="/brand-analysis">
@@ -43,7 +43,7 @@ const Index = () => {
                 </div>
                 <h2 className="text-2xl font-bold mb-4 text-center">Content Calendar</h2>
                 <p className="text-gray-300 mb-6 text-center">
-                  Generate AI-powered content calendars and briefs tailored to your industry, target audience, and goals
+                  Create AI-powered content calendars with customized strategies, including audience targeting and content planning
                 </p>
                 <div className="text-center">
                   <Link to="/content-calendar">

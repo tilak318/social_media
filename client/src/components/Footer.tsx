@@ -57,13 +57,18 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">© 2025 Shadow Mind. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">Privacy</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">Terms</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">Cookies</a>
-          </div>
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col items-center justify-center text-center">
+          <p className="text-sm text-gray-500 mb-2">© 2025 Shadow Mind. All rights reserved.</p>
+          <p className="text-base text-gray-500">developed by{" "}
+            <a 
+              href="https://xdev.onrender.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-base font-medium text-shadow-accent hover:text-shadow-highlight transition-colors duration-300"
+            >
+              xDev Solutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>

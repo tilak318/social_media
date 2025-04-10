@@ -89,10 +89,9 @@ const Navbar = () => {
 const NavLink = ({ to, children }: { to: string, children: React.ReactNode }) => (
   <Link 
     to={to} 
-    className="text-gray-300 hover:text-shadow-accent transition-colors text-lg px-4 py-2 relative group"
+    className="text-gray-300 hover:text-shadow-accent transition-colors text-lg px-4 py-2"
   >
     {children}
-    <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-gradient-to-r from-shadow-accent to-shadow-highlight scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
   </Link>
 );
 

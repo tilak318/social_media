@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrainCircuit, Menu, X } from "lucide-react";
+import { BrainCircuit, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -31,14 +31,16 @@ const Navbar = () => {
                 Get Started
               </Button>
             </Link>
-            <Button 
-              variant="ghost" 
-              className="md:hidden" 
-              size="icon"
+            
+            <button 
+              className="md:hidden relative w-10 h-10 flex justify-center items-center"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+              <div className={`w-7 h-0.5 bg-white absolute transition-all duration-300 ${mobileMenuOpen ? 'rotate-45' : 'translate-y-[-8px]'}`}></div>
+              <div className={`w-7 h-0.5 bg-white absolute transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+              <div className={`w-7 h-0.5 bg-white absolute transition-all duration-300 ${mobileMenuOpen ? '-rotate-45' : 'translate-y-[8px]'}`}></div>
+            </button>
           </div>
         </div>
 

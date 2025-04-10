@@ -59,7 +59,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col items-center justify-center text-center">
           <p className="text-sm text-gray-500 mb-2">© 2025 Shadow Mind. All rights reserved.</p>
-          <p className="text-base text-gray-500">developed by{" "}
+          <p className="text-base text-gray-500">Developed by{" "}
             <a 
               href="https://xdev.onrender.com" 
               target="_blank" 

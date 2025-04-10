@@ -30,7 +30,7 @@ const Index = () => {
                 </p>
                 <div className="text-center">
                   <Link to="/brand-analysis">
-                    <Button variant="outline" className="border-shadow-accent text-shadow-accent hover:bg-shadow-accent/20">
+                    <Button variant="outline" className="border-shadow-accent text-shadow-accent hover:bg-shadow-accent/20 bg-white/2">
                       Analyze Brand
                     </Button>
                   </Link>
@@ -47,7 +47,7 @@ const Index = () => {
                 </p>
                 <div className="text-center">
                   <Link to="/content-calendar">
-                    <Button variant="outline" className="border-shadow-highlight text-shadow-highlight hover:bg-shadow-highlight/20">
+                    <Button variant="outline" className="border-shadow-highlight text-shadow-highlight hover:bg-shadow-highlight/20 bg-white/2">
                       Create Calendar
                     </Button>
                   </Link>

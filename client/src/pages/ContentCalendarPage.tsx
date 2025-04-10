@@ -67,12 +67,12 @@ const ContentCalendarPage = () => {
   return (
     <div className="min-h-screen bg-shadow text-white">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pt-12 pb-16">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-white to-shadow-cyan">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-white to-shadow-cyan">
             Content Calendar Generator
           </h1>
-          <p className="text-lg text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-lg text-center text-gray-300 mb-10 max-w-3xl mx-auto">
             Create AI-powered content calendars and briefs for your social media strategy
           </p>
 
@@ -85,6 +85,7 @@ const ContentCalendarPage = () => {
                   value={formData.industry}
                   onChange={handleInputChange}
                   placeholder="e.g., Fashion, Tech, Food"
+                  className="bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
                 />
               </div>
               <div>
@@ -94,6 +95,7 @@ const ContentCalendarPage = () => {
                   value={formData.target_audience}
                   onChange={handleInputChange}
                   placeholder="e.g., Young professionals, 25-34"
+                  className="bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
                 />
               </div>
               <div>
@@ -103,7 +105,7 @@ const ContentCalendarPage = () => {
                   value={formData.content_goals}
                   onChange={handleInputChange}
                   placeholder="e.g., Increase brand awareness, drive engagement"
-                  className="h-24"
+                  className="h-24 bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
                 />
               </div>
               <Button

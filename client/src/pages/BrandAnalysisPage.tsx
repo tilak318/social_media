@@ -52,12 +52,12 @@ const BrandAnalysisPage = () => {
   return (
     <div className="min-h-screen bg-shadow text-white">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pt-12 pb-16">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-white to-shadow-cyan">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-white to-shadow-cyan">
             Brand Analysis
           </h1>
-          <p className="text-lg text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-lg text-center text-gray-300 mb-10 max-w-3xl mx-auto">
             Get detailed insights about any brand's social media presence and sentiment analysis
           </p>
 
@@ -68,7 +68,7 @@ const BrandAnalysisPage = () => {
                 placeholder="Enter brand name..."
                 value={brandName}
                 onChange={(e) => setBrandName(e.target.value)}
-                className="flex-1"
+                className="flex-1 bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
               />
               <Button 
                 onClick={analyzeBrand}

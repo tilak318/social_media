@@ -68,7 +68,7 @@ const BrandAnalysisPage = () => {
                 placeholder="Enter brand name..."
                 value={brandName}
                 onChange={(e) => setBrandName(e.target.value)}
-                className="flex-1 bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
+                className="flex-1 !bg-[#121212]"
               />
               <Button 
                 onClick={analyzeBrand}

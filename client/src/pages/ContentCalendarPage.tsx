@@ -85,7 +85,7 @@ const ContentCalendarPage = () => {
                   value={formData.industry}
                   onChange={handleInputChange}
                   placeholder="e.g., Fashion, Tech, Food"
-                  className="bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
+                  className="!bg-[#121212]"
                 />
               </div>
               <div>
@@ -95,7 +95,7 @@ const ContentCalendarPage = () => {
                   value={formData.target_audience}
                   onChange={handleInputChange}
                   placeholder="e.g., Young professionals, 25-34"
-                  className="bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
+                  className="!bg-[#121212]"
                 />
               </div>
               <div>
@@ -105,7 +105,7 @@ const ContentCalendarPage = () => {
                   value={formData.content_goals}
                   onChange={handleInputChange}
                   placeholder="e.g., Increase brand awareness, drive engagement"
-                  className="h-24 bg-white/40 border-white/40 text-shadow-dark placeholder:text-shadow-dark/60"
+                  className="h-24 !bg-[#121212]"
                 />
               </div>
               <Button

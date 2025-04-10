@@ -37,9 +37,9 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              <div className={`w-7 h-0.5 bg-shadow-accent absolute transition-all duration-300 ${mobileMenuOpen ? 'rotate-45' : 'translate-y-[-8px]'}`}></div>
-              <div className={`w-7 h-0.5 bg-shadow-accent absolute transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
-              <div className={`w-7 h-0.5 bg-shadow-accent absolute transition-all duration-300 ${mobileMenuOpen ? '-rotate-45' : 'translate-y-[8px]'}`}></div>
+              <div className={`w-7 h-0.5 bg-white absolute transition-all duration-300 ${mobileMenuOpen ? 'rotate-45' : 'translate-y-[-8px]'}`}></div>
+              <div className={`w-7 h-0.5 bg-white absolute transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+              <div className={`w-7 h-0.5 bg-white absolute transition-all duration-300 ${mobileMenuOpen ? '-rotate-45' : 'translate-y-[8px]'}`}></div>
             </button>
           </div>
         </div>

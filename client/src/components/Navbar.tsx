@@ -7,7 +7,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-shadow/80 border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-gradient-to-r from-shadow-card/90 via-shadow/95 to-shadow-card/90 border-b border-shadow-accent/30">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -20,9 +20,9 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-            <Link to="/brand-analysis" className="text-gray-300 hover:text-white transition-colors">Brand Analysis</Link>
-            <Link to="/content-calendar" className="text-gray-300 hover:text-white transition-colors">Content Calendar</Link>
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors text-lg px-4 py-2">Home</Link>
+            <Link to="/brand-analysis" className="text-gray-300 hover:text-white transition-colors text-lg px-4 py-2">Brand Analysis</Link>
+            <Link to="/content-calendar" className="text-gray-300 hover:text-white transition-colors text-lg px-4 py-2">Content Calendar</Link>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -50,21 +50,21 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/5"
+                className="text-gray-300 hover:text-white transition-colors py-3 px-4 rounded-md hover:bg-white/5 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 to="/brand-analysis" 
-                className="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/5"
+                className="text-gray-300 hover:text-white transition-colors py-3 px-4 rounded-md hover:bg-white/5 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Brand Analysis
               </Link>
               <Link 
                 to="/content-calendar" 
-                className="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/5"
+                className="text-gray-300 hover:text-white transition-colors py-3 px-4 rounded-md hover:bg-white/5 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Content Calendar

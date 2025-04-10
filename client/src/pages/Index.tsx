@@ -10,9 +10,9 @@ const Index = () => {
     <div className="min-h-screen bg-shadow text-white">
       <Navbar />
       <main className="pt-20">
-        <section className="py-20">
+        <section className="py-12">
           <div className="container mx-auto px-6">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 pt-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-white to-shadow-cyan">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 pt-0 text-center bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-white to-shadow-cyan">
               AI-Powered Social Media Tools
             </h1>
             <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">

@@ -1,9 +1,11 @@
-import React from "react";
-import { BrainCircuit, Menu } from "lucide-react";
+import React, { useState } from "react";
+import { BrainCircuit, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-shadow/80 border-b border-white/10">
       <div className="container mx-auto px-6 py-4">
@@ -11,7 +13,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex items-center space-x-2">
               <BrainCircuit className="h-8 w-8 text-shadow-accent" />
-              <span className="text-2xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-shadow-highlight to-shadow-cyan">
+              <span className="text-3xl md:text-4xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-shadow-accent via-shadow-highlight to-shadow-cyan">
                 Shadow Mind
               </span>
             </Link>
@@ -24,16 +26,59 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Link to="/brand-analysis">
+            <Link to="/brand-analysis" className="hidden sm:block">
               <Button className="bg-gradient-to-r from-shadow-accent to-shadow-highlight hover:opacity-90 transition-opacity">
                 Get Started
               </Button>
             </Link>
-            <Button variant="ghost" className="md:hidden" size="icon">
-              <Menu className="h-5 w-5" />
+            <Button 
+              variant="ghost" 
+              className="md:hidden" 
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden py-4 px-2 mt-2 border-t border-white/10 animate-in fade-in duration-200">
+            <div className="flex flex-col space-y-4">
+              <Link 
+                to="/" 
+                className="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/brand-analysis" 
+                className="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Brand Analysis
+              </Link>
+              <Link 
+                to="/content-calendar" 
+                className="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Content Calendar
+              </Link>
+              <Link 
+                to="/brand-analysis" 
+                className="sm:hidden text-center py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Button className="w-full bg-gradient-to-r from-shadow-accent to-shadow-highlight hover:opacity-90 transition-opacity">
+                  Get Started
+                </Button>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

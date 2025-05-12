@@ -49,16 +49,16 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-6 text-center">
           <p className="text-sm text-gray-500 mb-2">© 2025 Shadow Mind. All rights reserved.</p>
-          {/* <p className="text-base md:text-lg text-gray-500">Developed by{" "}
+          <p className="text-base md:text-lg text-gray-500">Developed by{" "}
             <a 
-              href="https://xdev.onrender.com" 
+              href="https://xdevsolutions.com" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="font-medium text-shadow-accent hover:text-shadow-highlight transition-colors duration-300"
             >
               xDev Solutions
             </a>
-          </p> */}
+          </p>
         </div>
       </div>
     </footer>
